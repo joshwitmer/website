@@ -1,0 +1,225 @@
+/*
+	COLORS
+ 
+	Dark Blue 		#222438
+	Medium Blue		#69697A
+	Light Blue	 	#C5C3DE
+	Yellow			#FFB000
+	Red				#D92B00
+	
+*/
+
+/* ======== */
+/* Sections */
+/* ======== */
+
+.hero{
+/*	background-image: url(../img/cityscape.jpg);*/
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../img/deskandchairs.jpg);
+	height: 100vh;
+	background-size: cover;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.content-section{
+	float: left;
+	display: block;
+	padding: 50px 0;
+	text-align: center;
+	width: 100%;
+}
+
+.screens-group{
+	display: block;
+	float: left;
+	border-bottom: 1px dashed #d4d4d4;
+	padding-bottom: 20px;
+	margin-bottom: 40px;
+}
+
+.screens-group:last-of-type{
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.sample-work{
+	display: inline-block;
+	float: left;
+	width: 31.333333%;
+	
+	margin: 1%;
+}
+
+/* ========== */
+/* Down Arrow */
+/* ========== */
+
+.down-arrow{
+	color: white;
+	font-size: 4em;
+	text-decoration: none;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -18px;
+	z-index: 200;
+	bottom-border: 0;
+
+	animation-name: bounce;
+	animation-duration: 1s;
+	animtation-iteration-count: infinite;
+	animation-timing-function: ease;
+
+	-webkit-animation-name: bounce;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: ease;
+}
+
+@keyframes bounce {
+
+	/* This is how it looks at the start*/
+	0%{
+		transform: translateY(0);
+	}
+
+	/* This is how it looks in the middle*/
+	50%{
+		transform: translateY(-20px);
+	}
+
+	/* This is how it looks at the end*/
+	100%{
+		transform: translateY(0);
+	}
+}
+
+@-webkit-keyframes bounce {
+
+	/* This is how it looks at the start*/
+	0%{
+		transform: translateY(0);
+	}
+
+	/* This is how it looks in the middle*/
+	50%{
+		transform: translateY(-20px);
+	}
+
+	/* This is how it looks at the end*/
+	100%{
+		transform: translateY(0);
+	}
+}
+
+
+/* ============ */
+/* Super Scroll */
+/* ============ */
+body {
+	background: #f5f5f5;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-weight: bold;
+	font-size: 20px;
+	text-align: center;
+	visibility: hidden;
+}
+
+h1 {
+	font-size: 120px;
+	font-weight: normal;
+	margin: 0;
+	font-family: 'Luckiest Guy',Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,Gadget,sans-serif;
+	text-transform: uppercase;
+	color: #FFB000;
+	text-shadow: 0 2px 1px #000;
+	line-height: .8;
+}
+
+h2 {
+	font-size: 150px;
+	font-weight: normal;
+	margin: 0;
+	color: #FFB000;
+	padding: 60px;
+	text-shadow: 0 2px 1px #000;
+	font-family: 'Luckiest Guy',Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,Gadget,sans-serif;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 60px;
+	font-weight: normal;
+	margin: 0;
+	color: #FFB000;
+	text-shadow: 0 2px 1px #000;
+	font-family: 'Luckiest Guy',Impact,Haettenschweiler,"Franklin Gothic Bold",Charcoal,Gadget,sans-serif;
+	text-transform: uppercase;	
+}
+
+p {	
+	width: 80%; 
+	margin: 20px auto; /*
+	text-shadow: 0 2px 1px #000; */
+	color: #444; 
+	line-height: 1.4;
+	font-weight: lighter; 
+}
+
+a, 
+a:visited { 
+	color: #FFB000; 
+	font-weight: bold; 
+	font-style: italic;
+	text-decoration: none;
+}
+
+a:hover{
+	border-bottom: 1px dashed #FFB000;
+}
+
+#title {
+	overflow: hidden;
+	font-size: 180px;
+	margin: 0 auto -580px;
+	width: 100%;
+	height: 1000px;
+	position: relative;
+	padding-top: 30px;
+	z-index: 99;
+}
+
+.title-line { position: relative; display: block; margin: auto; width: 300%; left: -100%; }
+#title-line2 { top: -60px; }
+.title-line span { display: inline-block; line-height: 1.1; position: relative; }
+#title-info { position: relative; z-index:99998; margin-top: 40px; opacity: 0; }
+
+@media (max-width: 815px) {
+  #title {
+    font-size: 130px;
+    line-height: 1.3em;
+  }
+}
+
+@media (max-width: 800px) {
+  .screens-group{
+  	text-align: center;
+  }
+
+  .sample-work {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  #title {
+    font-size: 80px;
+    line-height: 1.7em;
+  }
+}
